@@ -64,7 +64,7 @@
 .bx-wrapper .bx-pager {
 	text-align: center;
 	width: 50px;
-	left: 147px;
+	left: 25%;
 	bottom: 40px;
     border-right: 1px solid #dddddd;
 }
@@ -201,4 +201,11 @@
 	display: block;
 	font-size: .85em;
 	padding: 10px;
+}
+
+@media only screen and (max-width: 484px) {
+	.bx-wrapper .bx-pager {
+		left: -6%;
+    	bottom: 165px;
+	}
 }

@@ -1,14 +1,26 @@
 @main-bg-color: #96db4c;
 @main-text-color: #fff;
 @h2-text-color: #595959;
+
+
 .roboto-header {
 	font-family: 'Roboto', sans-serif;
 	font-size: 18px;
 	font-weight: 500;
 }
+
 .roboto-common {
 	font-family: 'Roboto', sans-serif;
 }
+
+
+.roboto-h2 {
+	.roboto-common;
+	font-size: 45px;
+	text-align: center;
+	color: @h2-text-color;
+}
+
 .nunito {
 	font-family: 'Nunito', sans-serif;
 	font-size: 27px;
@@ -25,12 +37,34 @@
 }
 
 
+@keyframes banner {
+	100%
+    {
+		box-shadow:0 0 0 300px rgba(0, 0, 0, 1) inset;
+    }
+	75%
+    {
+		box-shadow:0 0 0 300px rgba(0, 0, 0, 0,75) inset;
+    }
+	60%
+    {
+		box-shadow:0 0 0 300px rgba(0, 0, 0, 0.60) inset;
+	}
+	45%
+    {
+		box-shadow:0 0 0 300px rgba(0, 0, 0, 0.45) inset;
+    }
+	30%
+    {
+		box-shadow:0 0 0 300px rgba(0, 0, 0, 0.30) inset;
+	}
+    15%
+    {
+        box-shadow:0 0 0 300px rgba(0, 0, 0, 0.15) inset;
+    }
+    0%
+    {
+ 	 	box-shadow:0 0 0 300px rgba(0, 0, 0, 0) inset;
+    }
+}
 
-
-/*-----------------banner----------
-  width: 100%;
-  background-image: url(../img/header-bg-guitar.jpg);
-  background-position: center center;
-  background-size: cover;  
-  background-repeat: no-repeat;
-  */

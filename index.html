@@ -9,10 +9,14 @@
 	<link rel="stylesheet" href="css/variables.css">
 	<!-- bxSlider CSS file -->
 	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<!--   Gallery CSS file -->
+	<link rel="stylesheet" href="css/prettyPhoto.css" media="screen" title="prettyPhoto main stylesheet">	
 	<!-- jQuery library jquery-1.11.1.min.js" -->
-	<script src="js/jquery-1.11.1.min.js""></script>
+	<script src="js/jquery-1.11.1.min.js"></script>
 	<!-- bxSlider Javascript file -->
 	<script src="js/jquery.bxslider.min.js"></script>
+	<!-- Gallery Javascript file -->
+	<script src="js/jquery.prettyPhoto.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,500,700,900" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Nunito:700" rel="stylesheet">
 </head>
@@ -49,9 +53,10 @@
 	<div class="banner__wrap">
 		<!-- begin banner -->
 		<div class="banner">
-			<h1>OUR LEVEL OF </br>QUALITY HAS NO LIMIT</h1>
+			<h1>OUR LEVEL OF <br />QUALITY HAS NO LIMIT</h1>
 			<div class="separator"></div>
-			<p>It is a long established fact that a reader will be distracted by the readable content of a It is a</br> long established fact that a reader will be distracted by the readable content </p>
+			<p>It is a long established fact that a reader will be distracted by the readable content of a It is a
+			<br /> long established fact that a reader will be distracted by the readable content </p>
 		</div>
 		<!-- end banner -->
 	</div>
@@ -117,8 +122,83 @@
 	</div>
 	<!-- end review__block -->
 
+	<!-- begin gallery-wrap -->
+	<div class="gallery-wrap">
+		<!-- begin instagram__widget -->
+		<div class="instagram__widget">
+			<h2>GALLERY</h2>
+			<ul class="gallery clearfix">
+				<li><a href="img/fullscreen/1.JPG?lol=lol" title="You can add caption to pictures. You can add caption to pictures. You can add caption to pictures." rel="prettyPhoto[gallery1]"><img src="img/thumbnails/gallery__pic-1.png" width="466" height="292" alt="wood" /></a></li>
+				<li><a href="img/fullscreen/2.jpg" rel="prettyPhoto[gallery1]"><img src="img/thumbnails/gallery__pic-2.png" width="466" height="292" alt="grass machine" /></a></li>
+				<li><a href="img/fullscreen/3.jpg" rel="prettyPhoto[gallery1]"><img src="img/thumbnails/gallery__pic-3.png" width="466" height="292" alt="children" /></a></li>
+				<li><a href="img/fullscreen/4.jpg" rel="prettyPhoto[gallery1]"><img src="img/thumbnails/gallery__pic-4.png" width="466" height="292" alt="house" /></a></li>
+				<li><a href="img/fullscreen/5.jpg" rel="prettyPhoto[gallery1]"><img src="img/thumbnails/gallery__pic-5.png" width="466" height="292" alt="another grass machine" /></a></li>
+				<li><a href="img/fullscreen/6.jpg" rel="prettyPhoto[gallery1]"><img src="img/thumbnails/gallery__pic-6.png" width="466" height="292" alt="little grass machine" /></a></li>
+				<li><a href="img/fullscreen/1.JPG?lol=lol" title="You can add caption to pictures. You can add caption to pictures. You can add caption to pictures." rel="prettyPhoto[gallery1]"><img src="img/thumbnails/gallery__pic-7.png" width="466" height="292" alt="big grass machine" /></a></li>
+				<li><a href="img/fullscreen/3.jpg" rel="prettyPhoto[gallery1]"><img src="img/thumbnails/gallery__pic-8.png" width="466" height="292" alt="big house" /></a></li>
+			</ul>
+		</div>
+		<!-- end instagram__widget -->	
+	</div>
+	<!-- end gallery-wrap -->
 
+	<!-- begin email__block-wrap -->
+	<div class="email__block-wrap">
+		<!-- begin email__block -->
+				<div class="email__block">
+					<h2>YOU CAN EMAIL US</h2>
+					<form action="#" method="POST">
+						<input type="text" name="Name" placeholder="Name">
+						<input type="text" name="Phone" placeholder="Phone">
+						<input type="email" name="email" placeholder="Email">
+						<input type="submit" name="send" value="SEND">
+					</form>
+				</div>
+				<!-- end email__block -->		
+	</div>
+	<!-- end email__block-wrap -->
 
+	<!-- begin footer-wrap -->
+	<div class="footer-wrap">
+		<footer>
+			<!-- begin logo -->
+			<div class="logo">
+				<a href=""><span>YOUR</span>COMPANY</a>
+			</div>
+			<!-- end logo -->
+			<!-- begin nav -->
+			<nav></nav>
+			<!-- end nav -->
+			<!-- begin header__phone -->
+			<div class="footer__phone">
+				<p>+38 (050) 123-45-67</p>
+				<p>+38 (050) 123-45-67</p>
+			</div>
+			<!-- end header__phone -->
+		</footer>
+	</div>
+	<!-- end footer-wrap -->
+
+<!-- start instaram widget script-->
+<script>
+	$(document).ready(function(){
+		$("area[rel^='prettyPhoto']").prettyPhoto();
+		
+		$(".gallery:first a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'normal',theme:'light_square',slideshow:10000, autoplay_slideshow: true});
+		$(".gallery:gt(0) a[rel^='prettyPhoto']").prettyPhoto({animation_speed:'fast',slideshow:10000, hideflash: true});
+
+		$("#custom_content a[rel^='prettyPhoto']:first").prettyPhoto({
+			custom_markup: '<div id="map_canvas" style="width:260px; height:265px"></div>',
+			changepicturecallback: function(){ initialize(); }
+		});
+
+		$("#custom_content a[rel^='prettyPhoto']:last").prettyPhoto({
+			custom_markup: '<div id="bsap_1259344" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div><div id="bsap_1237859" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6" style="height:260px"></div><div id="bsap_1251710" class="bsarocks bsap_d49a0984d0f377271ccbf01a33f2b6d6"></div>',
+			changepicturecallback: function(){ _bsap.exec(); }
+		});
+	});
+</script>
+<!-- end intagram widget script-->
 <!-- Vertical slider script -->
 <script>
 	$('.bxslider').bxSlider({
